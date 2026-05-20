@@ -39,14 +39,14 @@ The key that was pasted into chat should be rotated in Google AI Studio / Google
 Terminal 1:
 
 ```powershell
-cd "C:\Users\antiq\OneDrive\Belgeler\New project\council-mobile"
+cd "C:\council-mobile"
 npm.cmd run api
 ```
 
 Terminal 2:
 
 ```powershell
-cd "C:\Users\antiq\OneDrive\Belgeler\New project\council-mobile"
+cd "C:\council-mobile"
 npm.cmd run android
 ```
 
