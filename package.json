@@ -1,0 +1,44 @@
+{
+  "name": "council-mobile",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "api": "node server/server.mjs",
+    "app": "node server/server.mjs",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "export:web": "expo export --platform web && node scripts/patch-web-export.mjs",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "tauri build",
+    "desktop:build:windows": "tauri build --bundles nsis",
+    "desktop:build:linux": "tauri build --bundles deb,appimage,rpm",
+    "desktop:build:macos": "tauri build --bundles dmg",
+    "ios:expo-go": "expo start",
+    "ios:simulator-build": "npx eas-cli@latest build --platform ios --profile ios-simulator",
+    "ios:simulator-run": "npx eas-cli@latest build:run --platform ios --latest",
+    "ios:development-build": "npx eas-cli@latest build --platform ios --profile ios-development",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "expo": "~54.0.33",
+    "expo-haptics": "~15.0.8",
+    "expo-image": "~3.0.11",
+    "expo-router": "~6.0.23",
+    "expo-sqlite": "~16.0.10",
+    "expo-status-bar": "~3.0.9",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0",
+    "react-native-web": "^0.21.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/react": "~19.1.0",
+    "typescript": "~5.9.2"
+  },
+  "private": true
+}

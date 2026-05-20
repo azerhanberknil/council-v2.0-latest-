@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Council",
+  "version": "1.0.0",
+  "identifier": "com.council.desktop",
+  "build": {
+    "beforeDevCommand": "npm run web -- --port 8081",
+    "devUrl": "http://localhost:8081",
+    "beforeBuildCommand": "npm run export:web",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Council",
+        "width": 1180,
+        "height": 820,
+        "minWidth": 860,
+        "minHeight": 640,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true,
+        "decorations": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "category": "Productivity",
+    "shortDescription": "Structured decision support",
+    "longDescription": "Council is a structured multi-lens decision support app for difficult life and work decisions.",
+    "copyright": "Copyright Council",
+    "windows": {
+      "nsis": {
+        "displayLanguageSelector": true,
+        "installerHooks": null
+      }
+    },
+    "linux": {
+      "deb": {
+        "depends": []
+      }
+    }
+  }
+}
